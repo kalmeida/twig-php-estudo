@@ -1,0 +1,7 @@
+{
+    "name": "Estudos de PHP",
+    "description": "Estudos de Projetos PHP utilizando Composer e Twig",
+	"require":{
+		"twig/twig" : "1.x"
+	}
+}

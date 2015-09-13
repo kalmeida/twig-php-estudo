@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Twig - Exemplos de Uso</title>
+</head>
+<body>
+    <!-- Aqui imprimimos a variável name -->
+    <h1>Olá, {{ name }}</h1>
+
+    <h3>Seus contatos:</h3>
+    <ul>
+        <!--
+            Vamos percorrer a lista de contatos. Aqui seria algo semelhando ao foreach no php.
+            Adicionamos também nosso filtro criado 'maskPhone'.
+            argument1 = c.phone
+            argument2 = '(##) ####-#####'
+        -->
+        { for c in contacts }
+            <li><b>{{ c.name }}</b> - {{ c.phone|maskPhone('(##) ####-#####') }}</li>
+        { endfor }
+    </ul>
+
+    <!-- Vamos contar a quantidade de contatos nesta lista? -->
+    <br>Sua lista contém: {{ contacts|length }} registros
+</body>
+</html>
