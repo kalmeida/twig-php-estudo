@@ -66,7 +66,7 @@ require_once 'vendor/autoload.php';
      * O primeiro parâmetro passado é o teamplate criado e o segundo será uma array com as variáveis a serem preenchidas.
      * Em seu template deverá conter as variáveis 'name' e 'contacts'
      */
-    $template = $twig->render('home.html', array(
+    $template = $twig->render('home.twig', array(
         'name' => $name,
         'contacts' => $contacts
     ));
